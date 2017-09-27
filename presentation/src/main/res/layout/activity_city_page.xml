@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="java.lang.String" />
+
+        <variable
+            name="viewModel"
+            type="by.webstudia.radmonitoring.cityPage.CityPageVM" />
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:background="@color/green"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:backgroundTintMode="multiply"
+            android:background="@color/green"
+            android:foregroundTint="@color/white"
+            app:itemBackground="@drawable/menu_bg"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_navigation_main" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/circle"
+                    android:paddingTop="7dp"
+                    android:gravity="center_vertical"
+                    android:text="@{viewModel.index}"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    tools:text="kkk"></TextView>
+
+
+                <TextView
+                    android:id="@+id/cityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="-148dp"
+                    android:text="@{viewModel.name}"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    tools:text="Бобруйск" />
+
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="2px"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="23dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="50dp"
+                    android:text="мкЗв/ч"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="42dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/min_value"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/mid_value"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.35"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/max_value"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.70"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:progress="@{viewModel.seekbarValue}"
+                    android:progressDrawable="@drawable/progress_drawable"
+                    android:thumb="@drawable/thumb_drawable_fix" />
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_min_value"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="нормальный"
+                        android:textColor="@color/sweetGreen"
+                        android:textSize="@dimen/smallText" />
+
+                    <TextView
+                        android:id="@+id/text_mid_value"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="средний"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/smallText" />
+
+                    <TextView
+                        android:id="@+id/text_max_value"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="повышенный"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/pink"
+                        android:textSize="@dimen/smallText" />
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:layout_marginTop="33dp"
+                        android:text="@string/power"
+                        android:textColor="@color/white"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:layout_marginTop="33dp"
+                        android:text="в норме"
+                        android:textColor="@color/green"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/selectCityButton"
+                        style="@style/MyButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/separator_blue"
+                        android:onClick="@{() -> viewModel.onMapButtonClick()}"
+                        android:paddingEnd="@dimen/paddingLeftRight"
+                        android:paddingStart="@dimen/paddingLeftRight"
+                        android:text="смотреть на карте"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <Button
+                        android:id="@+id/selectCityListButton"
+                        style="@style/MyButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/separator"
+                        android:onClick="@{() -> viewModel.onSuperButtonClick()}"
+                        android:paddingEnd="@dimen/paddingLeftRight"
+                        android:paddingStart="@dimen/paddingLeftRight"
+                        android:text="к списку городов"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+
+            </ScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

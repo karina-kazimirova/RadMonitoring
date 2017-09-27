@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">RadMonitoring</string>
+
+    <!-- Main -->
+    <string name="velcomMain">Выберите свой город:</string>
+    <string name="selectCityButton">Начать мониторинг</string>
+    <string name="selectOtherCityButton">Выбрать другой город</string>
+    <string name="goToMap">Смотреть карту</string>
+    <string name="seeMap">Посмотрите радиационную обстановку городов Беларуси на карте</string>
+    <string name="goToMapButton">На карте</string>
+    <string name="moreInfo">Узнать больше</string>
+    <string name="power">Уровень радиации</string>
+    <string name="city_list">Радиационный фон в городах Беларуси</string>
+    <string name="info_page">Справочная информация</string>
+    <string name="geoLocat">Вы находитесь в городе:</string>
+    <string name="goToInfo">Узнавайте интересующую вас информацию в справочном разделе</string>
+    <string name="yourCity">ваш город</string>
+    <string name="title_activity_inf">InfActivity</string>
+    <string name="title_doze">Уровни безопасных величин поглощённой дозы излучения</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="text_info">Естественный радиационный фон везде свой, в зависимости от высоты территории над уровнем моря и геологического строения каждого конкретного района.
+Безопасным считается уровень радиации до величины, приблизительно 0.5 микрозиверт  в  ч а с (до 50 микрорентген в час). до 0.2 микрозивертв  ч а с  (соответствует значениям до 20 микрорентген в час) - это наиболее безопасный уровень внешнего облучения тела человека, когда "радиационный фон в норме". Верхний предел допустимой мощности дозы – примерно 0.5 мкЗв/час (50 мкР/ч). Сократив время непрерывного нахождения до нескольких часов - люди могут без особого вреда своему здоровью перенести излучение мощностью в 10 мкЗ/ч (соответствует 1 миллирентген в час), а при времени экспозиции до нескольких десятков минут - относительно безвредно облучение с интенсивностью до нескольких миллизивертов в час (при медицинских исследованиях - флюорография, небольшие рентгеновские снимки и др.). Поглощённая доза облучения накапливается в организме, и за всю жизнь, сумма не должна превышать 100-700 мЗв (для жителей высокогорий и районов с повышенной естественной радиактивностью почв, подземных вод и горных пород - привычные им дозы будут находиться в верхнем пределе допустимых значений). </string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- CityModel -->
+
+    <string-array name="cities">
+        <item>Бобруйск</item>
+        <item>Брагин</item>
+        <item>Браслав</item>
+        <item>Брест</item>
+        <item>Гомель</item>
+        <item>Гродно</item>
+        <item>Минск</item>
+        <item>Могилев</item>
+        <item>Полоцк</item>
+        <item>Слуцк</item>
+    </string-array>
+
+
+</resources>

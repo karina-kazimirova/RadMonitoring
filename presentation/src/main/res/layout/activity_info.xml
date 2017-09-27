@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="by.webstudia.radmonitoring.info.InfoActivityViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green">
+
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:foregroundTint="@color/white"
+            app:itemBackground="@drawable/menu_bg"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_navigation_main" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_minsk"
+            android:orientation="vertical"
+            android:layout_above="@+id/bottom_navigation"
+            android:layout_alignParentStart="true">
+
+
+
+
+            <TextView
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:gravity="center_horizontal"
+                android:padding="20dp"
+                android:text="@string/info_page"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+
+
+            <ScrollView
+                android:id="@+id/bank_account_scroll_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="15dp"
+                            android:text="@string/title_doze"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <com.uncopt.android.widget.text.justify.JustifiedTextView
+                            android:layout_width="match_parent"
+                            android:text="@string/text_info"
+                            android:paddingBottom="30dp"
+                            android:textColor="@color/grey"
+                            android:textSize="16sp"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@color/white"></View>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

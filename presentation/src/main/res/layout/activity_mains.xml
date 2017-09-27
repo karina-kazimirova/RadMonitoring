@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="java.lang.String" />
+
+        <variable
+            name="viewModel"
+            type="by.webstudia.radmonitoring.start.MainActivityViewModel" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:orientation="vertical">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </android.support.v4.view.ViewPager>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/sliding_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorHeight="5dp"
+            app:tabPaddingBottom="6dp"
+            android:minHeight="?attr/actionBarSize"
+            android:scaleY="-1"
+            android:background="@color/colorPrimaryDark"
+            app:tabIndicatorColor="@color/stopGradient" />
+
+    </LinearLayout>
+
+</layout>
