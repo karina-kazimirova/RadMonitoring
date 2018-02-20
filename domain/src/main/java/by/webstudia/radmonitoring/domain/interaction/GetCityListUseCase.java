@@ -31,7 +31,8 @@ public class GetCityListUseCase extends UseCase<Void, List<CityModel>> {
        //Log.d("SSS", String.valueOf(cityData));
 
 
-        return RestService.getInstance().getCities().map(new Function<List<CityData>, List<CityModel>>() {
+        return RestService.getInstance().getCities()
+                .map(new Function<List<CityData>, List<CityModel>>() {
             @Override
             public List<CityModel> apply(@NonNull List<CityData> cities) throws Exception {
                 List<CityModel> list = new ArrayList<>();
